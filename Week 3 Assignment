@@ -1,0 +1,74 @@
+def is_it_even(number):
+  if(number % 2 == 0):
+    return True
+  else:
+    return False
+    
+    hello = 0
+while hello < 5:
+ hello += 1
+ print("Hello World")
+ 
+ number1 = input("enter a number: ")
+number2 = input("enter another number: ")
+if number1 < number2:
+ print(number1)
+elif number2 < number1:
+ print(number2)
+ 
+ x = int(input("enter a number: "))
+y = int(input("enter another number: "))
+z = int(input("enter a third number: "))
+b = None
+m = None
+s = None
+if x > y:
+ b = x
+ m = y
+elif x < y:
+ m = x
+ b = y
+if b > z:
+ if m > z:
+   s = z
+ elif m < z:
+   s = m
+   m = z
+elif b < z:
+ b = z
+ m = x
+ s = y
+print(m)
+
+quantity_even = 0
+for x in range(5):
+ number = int( input("enter a number: ") )
+ if is_it_even( number ):
+   # increase quantity of even numbers
+   quantity_even = quantity_even + 1
+print("there are", quantity_even, "even numbers")
+
+quantity_even = 0
+x = input("enter as many numbers as you want, then enter -1 when finished: ")
+while not x == -1:
+  x = int( input("enter a number: ") )
+  if is_it_even( x ):
+   # increase quantity of even numbers
+   quantity_even = quantity_even + 1
+print("there are", quantity_even, "even numbers")
+
+x = 5
+print('Pick a number 1-10!')
+
+guess = int(input("Enter: "))
+
+if (guess < 5):
+    print("you are too low!")
+    guess = int(input("Enter: "))
+  
+if (guess > 5):
+    print("you are too high!")
+    guess = int(input("Enter: "))
+  
+if (guess == 5):
+    print("you got it!")
