@@ -1,0 +1,34 @@
+hw = print ('hello world')
+hw
+
+word = "bee hive "
+print(word * 5)
+ 
+word = "bee hive "
+x = int(input("enter a number: "))
+print(word * x)
+
+x = int(input("enter a number: "))
+square = x * x
+print(square)
+ 
+bigger10 = 10
+x = int(input("enter a number: "))
+if x < bigger10:
+ print("10")
+elif x > bigger10:
+ print(x)
+ 
+x = int(input("enter a number: "))
+y = int(input("enter another number: "))
+if x < y:
+ print(y)
+elif x > y:
+ print(x)
+ 
+age1 = int(input("enter your age: "))
+age2 = int(input("enter your friend's age: "))
+if age1 < age2:
+ print("The older of the two people is", age2, "years old!")
+elif age1 > age2:
+ print("The older of the two people is", age1, "years old!")
