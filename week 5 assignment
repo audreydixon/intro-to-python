@@ -1,0 +1,293 @@
+def day_of_the_week(x):
+  day = None 
+  if x == 1:
+    day = "Wednesday"
+  if x == 2:
+    day = "Thursday"
+  if x == 3:
+    day = "Friday"
+  if x == 4:
+    day = "Saturday"  
+  if x == 5:
+    day = "Sunday"
+  if x == 6:
+    day = "Monday"
+  if x == 7:
+    day = "Tuesday"
+  return day
+
+#This should print "Tuesday"
+print("The 7th day of the week is", day_of_the_week(7))
+
+#This should print "Sunday"
+print("The 5th day of the week is", day_of_the_week(5))
+
+
+
+def january_day(day_of_the_week):
+  while day_of_the_week > 7:
+    day_of_the_week = day_of_the_week - 7
+  day = None 
+  if day_of_the_week == 1:
+    day = "Wednesday"
+  if day_of_the_week == 2:
+    day = "Thursday"
+  if day_of_the_week == 3:
+    day = "Friday"
+  if day_of_the_week == 4:
+    day = "Saturday"  
+  if day_of_the_week == 5:
+    day = "Sunday"
+  if day_of_the_week == 6:
+    day = "Monday"
+  if day_of_the_week == 7:
+    day = "Tuesday"
+  return day
+
+#This should print "Wednesday"
+print("The 1st Day of January is", january_day(1))
+
+#This should print "Thursday"
+print("The 30th day in January is", january_day(30))
+
+#This should print "Sunday"
+print("The 19th day in January is", january_day(19))
+
+
+
+def number_to_day(number_to_day):
+  while number_to_day > 7:
+    number_to_day = number_to_day - 7
+  day = None 
+  if number_to_day == 1:
+    day = "Wednesday"
+  if number_to_day == 2:
+    day = "Thursday"
+  if number_to_day == 3:
+    day = "Friday"
+  if number_to_day == 4:
+    day = "Saturday"  
+  if number_to_day == 5:
+    day = "Sunday"
+  if number_to_day == 6:
+    day = "Monday"
+  if number_to_day == 7:
+    day = "Tuesday"
+  return day
+
+#This should print "Wednesday"
+print("The 1st Day of 2020 is", number_to_day(1))
+
+#This should print "Sunday"
+print("The 19th day in 2020 is", number_to_day(19))
+
+#This should print "Thursday"
+print("The 100th day in 2020 is", number_to_day(100))
+
+
+
+def month_day_to_number(month_num, day_num):
+  x = None
+  if month_num == 1:
+    x = day_num
+  if month_num == 2:
+    x = (day_num + 31)def month_day_to_number(month_num, day_num):
+  x = None
+  if month_num == 1:
+    x = day_num
+  if month_num == 2:
+    x = (day_num + 31)
+  if month_num == 3:
+    x = (day_num + 60)
+  if month_num == 4:
+    x = (day_num + 90)
+  if month_num == 5:
+    x = (day_num + 121)
+  if month_num == 6:
+    x = (day_num + 151)
+  if month_num == 7:
+    x = (day_num + 182)
+  if month_num == 8:
+    x = (day_num + 213)
+  if month_num == 9:
+    x = (day_num + 243)
+  if month_num == 10:
+    x = (day_num + 274)
+  if month_num == 11:
+    x = (day_num + 304)
+  if month_num == 12:
+    x = (day_num + 335)
+  return x
+
+#This should print 1
+print("January 1st is the number", month_day_to_number(1,1), "day of 2020")
+
+#This should print 30
+print("January 30th is the number", month_day_to_number(1,30), "day of 2020")
+
+#This should print 60
+print("February 29th is the number", month_day_to_number(2,29), "day of 2020")
+
+
+
+def month_to_num(month_to_num):
+  x = None
+  if month_to_num == "January":
+    x = 1
+  if month_to_num == "February":
+    x = 2
+  if month_to_num == "March":
+    x = 3
+  if month_to_num == "April":
+    x = 4
+  if month_to_num == "May":
+    x = 5
+  if month_to_num == "June":
+    x = 6
+  if month_to_num == "July":
+    x = 7
+  if month_to_num == "August":
+    x = 8
+  if month_to_num == "September":
+    x = 9
+  if month_to_num == "October":
+    x = 10
+  if month_to_num == "November":
+    x = 11
+  if month_to_num == "December":
+    x = 12
+  return x
+
+#This should print 3
+print("March is the number", month_to_num("March"), "month of the year")
+
+#This should print 11
+print("November is the number", month_to_num("November"), "month of the year")
+
+
+
+#month_to_num is taking in variables "month_to_num" as a string and would give us variable "x" as an integer
+def month_to_nm(month_to_num):
+  x = 0
+  if month_to_num == "January":
+    x = 1
+  if month_to_num == "February":
+    x = 2
+  if month_to_num == "March":
+    x = 3
+  if month_to_num == "April":
+    x = 4
+  if month_to_num == "May":
+    x = 5
+  if month_to_num == "June":
+    x = 6
+  if month_to_num == "July":
+    x = 7
+  if month_to_num == "August":
+    x = 8
+  if month_to_num == "September":
+    x = 9
+  if month_to_num == "October":
+    x = 10
+  if month_to_num == "November":
+    x = 11
+  if month_to_num == "December":
+    x = 12
+  return x
+#variable "x" describes the number of the month
+
+#month_day_to_number takes in  variables "x, day_num" as numbers and gives us variable "x" as a number
+def month_day_to_number(x, day_num):
+  y = None
+  if x == 1:
+    y = day_num
+  if x == 2:
+    y = (day_num + 31)
+  if x == 3:
+    y = (day_num + 60)
+  if x == 4:
+    y = (day_num + 91)
+  if x == 5:
+    y = (day_num + 121)
+  if x == 6:
+    y = (day_num + 152)
+  if x == 7:
+    y = (day_num + 182)
+  if x == 8:
+    y = (day_num + 213)
+  if x == 9:
+    y = (day_num + 244)
+  if x == 10:
+    y = (day_num + 274)
+  if x == 11:
+    y = (day_num + 305)
+  if x == 12:
+    y = (day_num + 335)
+  return y
+#variable "y" represents what day of 2020 it is. 
+
+#number_to_day takes in variable "y" as numbers and returns variable "day" as the name of the day of the week
+def number_to_day(y):
+  while y > 7:
+    y = y - 7
+  day = None 
+  if y == 1:
+    day = "Wednesday"
+  if y == 2:
+    day = "Thursday"
+  if y == 3:
+    day = "Friday"
+  if y == 4:
+    day = "Saturday"  
+  if y == 5:
+    day = "Sunday"
+  if y == 6:
+    day = "Monday"
+  if y == 7:
+    day = "Tuesday"
+  return day
+
+def what_day_of_the_week(month_to_num, day_num):
+  x = month_to_nm(month_to_num) 
+  y = month_day_to_number(x, day_num)
+  day = number_to_day(y)
+  return day
+
+#This should print "Monday"
+print("September 21st, 2020 is a", what_day_of_the_week("September", 21))
+
+#This should print "Saturday"
+print("October 31st, 2020 is a", what_day_of_the_week("October", 31))
+
+#This should print "Thursday"
+print("November 26th, 2020 is a", what_day_of_the_week("November", 26))
+  if month_num == 3:
+    x = (day_num + 60)
+  if month_num == 4:
+    x = (day_num + 90)
+  if month_num == 5:
+    x = (day_num + 121)
+  if month_num == 6:
+    x = (day_num + 151)
+  if month_num == 7:
+    x = (day_num + 182)
+  if month_num == 8:
+    x = (day_num + 213)
+  if month_num == 9:
+    x = (day_num + 243)
+  if month_num == 10:
+    x = (day_num + 274)
+  if month_num == 11:
+    x = (day_num + 304)
+  if month_num == 12:
+    x = (day_num + 335)
+  return x
+
+#This should print 1
+print("January 1st is the number", month_day_to_number(1,1), "day of 2020")
+
+#This should print 30
+print("January 30th is the number", month_day_to_number(1,30), "day of 2020")
+
+#This should print 60
+print("February 29th is the number", month_day_to_number(2,29), "day of 2020")
