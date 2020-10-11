@@ -1,0 +1,131 @@
+#0
+variable = "Hello World"
+print(variable)
+variable = variable.upper()
+print(variable)
+variable = variable.lower()
+print(variable)
+
+
+#1
+def hasVowels(word):
+
+  found = word.find("a")
+  if (found != -1):
+    return True
+  found = word.find("e")
+  if (found != -1):
+    return True
+  found = word.find("i")
+  if (found != -1):
+    return True
+  found = word.find("o")
+  if (found != -1):
+    return True
+  found = word.find("u")
+  if (found != -1):
+    return True
+  else:
+    return False
+
+def main():
+  variable = "Hello World"
+  if (hasVowels(variable) != False):
+    print("vowel")
+  else:
+    print("no vowel")
+
+main()
+
+
+#2
+def hasVowels(word):
+
+  found = word.find("a")
+  if (found != -1):
+    return True
+  found = word.find("e")
+  if (found != -1):
+    return True
+  found = word.find("i")
+  if (found != -1):
+    return True
+  found = word.find("o")
+  if (found != -1):
+    return True
+  found = word.find("u")
+  if (found != -1):
+    return True
+  else:
+    return False
+
+def main():
+  variable = input("Enter a word with a vowel: ")
+  if (hasVowels(variable) != False):
+    print("has at least one vowel")
+  else:
+    print("has no vowels")
+    variable = input("Enter a word with a vowel: ")
+  if (hasVowels(variable) != False):
+    print("has at least one vowel")
+  else:
+    print("has no vowel")
+
+main()
+
+
+#3
+def countvowels(word):
+  
+  word = word.lower()
+
+  numberofvowels = 0
+
+  for vowels in "aeiouy":
+    count = word.count(vowels)
+    numberofvowels += count
+
+  return numberofvowels
+
+def main():
+  variable = input("Enter a word with vowels:")
+  print(countvowels(variable))
+
+main()
+
+
+#4
+list = []
+x = ""
+while x != "stop":
+  x = input ("Enter a word ")
+  x = x.lower()
+  list.append(x)
+print(list)
+
+
+#5
+def countvowels(word):
+  
+  word = word.lower()
+
+  numberofvowels = 0
+
+  for vowels in "aeiouy":
+    count = word.count(vowels)
+    numberofvowels += count
+
+  return numberofvowels
+
+def main():
+  counter = -1
+  list = []
+  x = ""
+  while x != "stop":
+    x = input ("Enter a word ")
+    x = x.lower()
+    counter += countvowels(x)
+    list.append(x)
+  print(list)
+  print("number of vowels", counter)
+main()
