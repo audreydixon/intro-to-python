@@ -1,0 +1,77 @@
+score = 0 
+
+blankC = 0
+
+import random 
+
+
+
+def print_body(score):
+  if score == 1:
+    print("  (_)   ")
+  if score == 2:
+    print("  (_)   ")
+    print("   |   ")
+    print("   |   ")
+  if score == 3:
+    print("  (_)   ")
+    print("  /|   ")
+    print(" / |   ")
+  if score == 4:
+    print("  (_)   ")
+    print("  /|\  ")
+    print(" / | \ ")
+  if score == 5:
+    print("  (_)   ")
+    print("  /|\  ")
+    print(" / | \ ")
+    print("  /    ")
+    print(" /     ")
+  if score == 6:
+    print("  (_)   ")
+    print("  /|\  ")
+    print(" / | \ ")
+    print("  / \  ")
+    print(" /   \ ") 
+    print("You lose :(")  
+
+
+
+def choose_word():
+  my_list = ["pen", "cat", "dog", "bat", "sea", "pay", "buy", "bye", "try", "cup", "lie", "lay", "red", "one", "won", "win", "two", "nut", "dry", "wet"]
+  my_word = random.choice(my_list).upper().lower()
+  return my_word
+
+the_word = choose_word()
+
+my_list = []
+for num in range(len(the_word)):
+  my_list.append("_")
+
+
+print(my_list)
+
+def find_letter(x , y):
+  if y in x:
+    letterindex = x.index(y)
+    print(letterindex)
+
+
+
+while score <6:
+  guess = input("Enter a Letter: ")
+  if guess not in the_word: 
+    score+=1
+    print_body(score)
+  if guess in the_word:
+    blankC+=1
+    i = the_word.index (guess) 
+    print("Good guess!")
+    my_list[i] = guess
+    my_list[i] = the_word
+    i = the_word.index (guess)
+    my_list[i] = guess
+    print(my_list) 
+    if blankC == 3:
+     print("You win!")
+     break
