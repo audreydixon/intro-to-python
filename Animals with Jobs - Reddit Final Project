@@ -1,0 +1,31 @@
+!pip install -q praw
+import praw
+
+reddit = praw.Reddit(client_id="f2Vk50qzGXHk2g", client_secret="z00N7V1BCBM4p8nOC3FKNMJ3zcIJkA", user_agent="Surprise visit from the health inspector by u/3A0K1")
+
+print(reddit.read_only)
+
+subreddit = reddit.subreddit("catswithjobs")
+
+print(subreddit.display_name)  # output: redditdev
+print(subreddit.title)         # output: reddit development
+print(subreddit.description)   # output: a subreddit for discussion of ...
+
+#this prints the title and url of the 25 most upvoted posts in r/catswithjobs
+for submission in reddit.subreddit("catswithjobs").hot(limit=25):
+  print(submission.title)
+  print(submission.url)
+
+#this asks the user to input a keyword from a post from r/catswithjobs, then asks the user to run the program again if there are no results
+fave_top = input("Enter a keyword from your favorite post title from r/catswithjobs here: ")
+print("You chose '" + fave_top + "' as your keyword!")
+print("Here are some similar posts from r/turtleswithjobs!")
+print("If nothing appears, then there are no similar posts in r/turtleswithjobs :(")
+print("Please run the program again and try a new keyword!")
+
+#this searches those keywords in r/turtleswithjobs and prints the titles and urls of posts with those keywords, then thanks the user for searching
+turtles = reddit.subreddit("turtleswithjobs")
+for submission in all.search(fave_top, limit=10):
+  print(submission.title)
+  print(submission.url)
+  print("Thank you for exploring r/turtleswithjobs! :)")
